@@ -10,7 +10,7 @@ const menuItems = [
   { href: '/', label: 'Pollution Map', icon: Map },
   { href: '/reports', label: 'Reports List', icon: List },
   { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
-  { href: '/learn', label: 'Learn & Prevent', icon: Lightbulb },
+  { href: '/learn', label: 'AI Assistant', icon: Lightbulb },
   { href: '/feedback', label: 'Feedback', icon: Mail },
 ];
 

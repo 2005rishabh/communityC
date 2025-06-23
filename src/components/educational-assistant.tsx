@@ -28,7 +28,7 @@ const formSchema = z.object({
   reportedIncidents: z.string().min(10, "Please describe the incidents."),
 });
 
-export function EducationalAssistant() {
+export function AIAssistant() {
   const [aiResponse, setAiResponse] = useState<ProvideEducationalContentOutput | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
@@ -63,7 +63,7 @@ export function EducationalAssistant() {
     <div className="space-y-8">
       <Card>
         <CardHeader>
-          <CardTitle>Get AI-Powered Advice</CardTitle>
+          <CardTitle>AI Assistant</CardTitle>
           <CardDescription>
             Enter your location and observed pollution to receive personalized educational content and prevention tips.
           </CardDescription>
