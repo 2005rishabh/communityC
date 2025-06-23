@@ -3,19 +3,22 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
-import { Map, List, Trophy, Lightbulb, Mail, PlusCircle } from 'lucide-react';
+import { Map, List, Trophy, Lightbulb, Mail, PlusCircle, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const menuItems = [
-  { href: '/', label: 'Pollution Map', icon: Map },
-  { href: '/reports', label: 'Reports List', icon: List },
-  { href: '/leaderboard', label: 'Leaderboard', icon: Trophy },
-  { href: '/learn', label: 'AI Assistant', icon: Lightbulb },
-  { href: '/feedback', label: 'Feedback', icon: Mail },
-];
+import { useTranslations } from '@/hooks/use-translations';
 
 export function MainNav() {
   const pathname = usePathname();
+  const t = useTranslations();
+
+  const menuItems = [
+    { href: '/', label: t('pollutionMap'), icon: Map },
+    { href: '/reports', label: t('reportsList'), icon: List },
+    { href: '/leaderboard', label: t('leaderboard'), icon: Trophy },
+    { href: '/learn', label: t('aiAssistant'), icon: Lightbulb },
+    { href: '/feedback', label: t('feedback'), icon: Mail },
+    { href: '/settings', label: t('settings'), icon: Settings },
+  ];
 
   return (
     <div className="flex h-full flex-col justify-between">
@@ -40,7 +43,7 @@ export function MainNav() {
         <Button asChild className="w-full">
           <Link href="/report">
             <PlusCircle className="mr-2 h-4 w-4" />
-            Report Pollution
+            {t('reportPollution')}
           </Link>
         </Button>
       </div>
