@@ -1,9 +1,9 @@
 "use client";
 
-import { ReportsProvider } from "@/contexts/ReportsContext";
 import { SidebarProvider, Sidebar, SidebarHeader, SidebarContent, SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppLogo } from "@/components/app-logo";
 import { MainNav } from "@/components/main-nav";
+import { UserNav } from "@/components/user-nav";
 
 export default function MainLayout({
   children,
@@ -11,7 +11,6 @@ export default function MainLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ReportsProvider>
       <SidebarProvider>
         <Sidebar>
           <SidebarHeader className="border-b border-sidebar-border p-4">
@@ -27,10 +26,10 @@ export default function MainLayout({
             <div className="w-full flex-1">
               {/* Can add search or other header elements here */}
             </div>
+            <UserNav />
           </header>
           <main className="flex-1 p-4 sm:p-6">{children}</main>
         </SidebarInset>
       </SidebarProvider>
-    </ReportsProvider>
   );
 }

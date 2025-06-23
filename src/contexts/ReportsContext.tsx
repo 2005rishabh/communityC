@@ -3,6 +3,7 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
 import { reports as initialReports, Report } from '@/lib/data';
 import { useRouter } from 'next/navigation';
+import { useAuth } from './AuthContext';
 
 type ReportsContextType = {
   reports: Report[];
@@ -14,12 +15,13 @@ const ReportsContext = createContext<ReportsContextType | undefined>(undefined);
 export function ReportsProvider({ children }: { children: ReactNode }) {
   const [reports, setReports] = useState<Report[]>(initialReports);
   const router = useRouter();
+  const { user } = useAuth();
 
   const addReport = (newReportData: Omit<Report, 'id' | 'user' | 'timestamp' | 'image'> & { photo: FileList }) => {
     const newReport: Report = {
       id: String(Date.now()),
       user: {
-        name: "Ravi Kumar",
+        name: user?.name || "Anonymous",
         avatar: "https://placehold.co/100x100"
       },
       image: newReportData.photo.length > 0 ? URL.createObjectURL(newReportData.photo[0]) : "https://placehold.co/600x400",
