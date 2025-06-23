@@ -21,22 +21,22 @@ export default function PollutionMapPage() {
       <div className="relative h-[60vh] w-full overflow-hidden rounded-lg shadow-lg">
         <Image
           src="https://placehold.co/1200x800"
-          alt="Pollution map"
+          alt="Pollution map of India"
           layout="fill"
           objectFit="cover"
-          data-ai-hint="world map"
+          data-ai-hint="India map"
         />
         <Card className="absolute bottom-4 left-4 max-w-sm animate-fade-in-up">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <MapPin className="h-5 w-5 text-destructive" />
-              <span>Riverfront Park</span>
+              <span>Juhu Beach, Mumbai</span>
             </CardTitle>
-            <CardDescription>Reported by Jane Doe</CardDescription>
+            <CardDescription>Reported by Priya Sharma</CardDescription>
           </CardHeader>
           <CardContent>
             <p className="text-sm text-muted-foreground">
-              Large amount of plastic bottles and bags dumped near the river bank.
+              Large amount of plastic bottles and bags dumped near the shore.
             </p>
           </CardContent>
           <CardFooter className="flex justify-between">

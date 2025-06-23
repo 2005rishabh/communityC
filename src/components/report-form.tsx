@@ -63,7 +63,7 @@ export function ReportForm() {
                 <FormItem>
                   <FormLabel className="flex items-center gap-2"><MapPin className="h-4 w-4" /> Location</FormLabel>
                   <FormControl>
-                    <Input placeholder="e.g., Riverfront Park, Smallville" {...field} />
+                    <Input placeholder="e.g., Juhu Beach, Mumbai" {...field} />
                   </FormControl>
                   <FormDescription>
                     Be as specific as possible with the location.

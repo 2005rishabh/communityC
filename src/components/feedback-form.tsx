@@ -65,7 +65,7 @@ export function FeedbackForm() {
                   <FormItem>
                     <FormLabel>Your Name</FormLabel>
                     <FormControl>
-                      <Input placeholder="John Doe" {...field} />
+                      <Input placeholder="Rohan Sharma" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

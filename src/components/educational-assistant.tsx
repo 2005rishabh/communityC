@@ -78,7 +78,7 @@ export function EducationalAssistant() {
                   <FormItem>
                     <FormLabel>Your Location</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., Los Angeles, CA" {...field} />
+                      <Input placeholder="e.g., New Delhi, India" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -91,7 +91,7 @@ export function EducationalAssistant() {
                   <FormItem>
                     <FormLabel>Observed Pollution</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., Smog, plastic waste in parks" {...field} />
+                      <Input placeholder="e.g., Air pollution, plastic waste in Yamuna river" {...field} />
                     </FormControl>
                     <FormDescription>
                       Describe the types of pollution you've seen.
