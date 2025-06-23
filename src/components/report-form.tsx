@@ -18,6 +18,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { Camera, MapPin, Send } from "lucide-react";
+import { useReports } from "@/contexts/ReportsContext";
 
 const formSchema = z.object({
   location: z.string().min(2, {
@@ -31,6 +32,7 @@ const formSchema = z.object({
 
 export function ReportForm() {
   const { toast } = useToast();
+  const { addReport } = useReports();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -40,7 +42,7 @@ export function ReportForm() {
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    addReport(values);
     toast({
       title: "Report Submitted!",
       description: "Thank you for helping keep our environment clean.",
