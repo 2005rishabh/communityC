@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { SidebarMenu, SidebarMenuItem, SidebarMenuButton } from '@/components/ui/sidebar';
-import { Map, List, Trophy, Lightbulb, Mail, PlusCircle, Settings } from 'lucide-react';
+import { Map, List, Lightbulb, Mail, PlusCircle, Settings } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslations } from '@/hooks/use-translations';
 
@@ -14,7 +14,6 @@ export function MainNav() {
   const menuItems = [
     { href: '/', label: t('pollutionMap'), icon: Map },
     { href: '/reports', label: t('reportsList'), icon: List },
-    { href: '/leaderboard', label: t('leaderboard'), icon: Trophy },
     { href: '/learn', label: t('aiAssistant'), icon: Lightbulb },
     { href: '/feedback', label: t('feedback'), icon: Mail },
     { href: '/settings', label: t('settings'), icon: Settings },

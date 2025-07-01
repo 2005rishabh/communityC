@@ -5,7 +5,6 @@ export const translations = {
     // Main Nav
     pollutionMap: "Pollution Map",
     reportsList: "Reports List",
-    leaderboard: "Leaderboard",
     aiAssistant: "AI Assistant",
     feedback: "Feedback",
     settings: "Settings",
@@ -33,7 +32,6 @@ export const translations = {
     // Main Nav
     pollutionMap: "Pradushan Naksha",
     reportsList: "Report Suchi",
-    leaderboard: "Leaderboard",
     aiAssistant: "AI Sahayak",
     feedback: "Pratikriya",
     settings: "Settings",
